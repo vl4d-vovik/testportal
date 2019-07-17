@@ -4,7 +4,7 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nightwatch"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/vl4d-vovik/testportal/issues"
   },
-  "homepage": "https://github.com/vl4d-vovik/testportal#readme"
+  "homepage": "https://github.com/vl4d-vovik/testportal#readme",
+  "devDependencies": {
+    "nightwatch": "^1.1.13"
+  }
 }
