@@ -6,6 +6,6 @@ module.exports = {
         browser
             .url('https://dis.eagleinvsys.com')
             .waitForElementVisible('.v-toolbar__title')
-            .assert.containsText(".v-toolbar__title", "WIS Portal");
+            .assert.containsText(".v-toolbar__title", "DIS Portal");
     }
 }
