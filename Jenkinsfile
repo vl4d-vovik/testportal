@@ -20,6 +20,7 @@ node {
     try {
         stage('Test report') {
             echo 'Test report'
+            junit '**/reports/*.xml'
         }
         echo 'Ok'
     } catch (e) {
