@@ -1,5 +1,5 @@
 node {
-    triggers {
+    triggeredBy {
         cron('H/10 * * * *')
     }
     try {
