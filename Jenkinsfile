@@ -1,4 +1,7 @@
 node {
+    triggers {
+        cron('H/10 * * * *')
+    }
     try {
         stage('checkout') {
             echo 'checkout'
