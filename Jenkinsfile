@@ -1,8 +1,11 @@
+properties(
+    [
+        ...  , // other properties that you have
+        pipelineTriggers([cron('0    ')]),
+    ]
+)
+
 node {
-    agent any
-    triggers {
-        cron('H/10 * * * *')
-    }
     try {
         stage('checkout') {
             echo 'checkout'
