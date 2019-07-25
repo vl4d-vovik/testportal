@@ -1,5 +1,6 @@
 node {
-    triggeredBy {
+    agent any
+    triggers {
         cron('H/10 * * * *')
     }
     try {
