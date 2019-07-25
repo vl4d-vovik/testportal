@@ -1,11 +1,7 @@
-properties(
-    [
-        ...  , // other properties that you have
-        pipelineTriggers([cron('0    ')]),
-    ]
-)
+
 
 node {
+    properties([pipelineTriggers([cron('H/5 * * * *')])])
     try {
         stage('checkout') {
             echo 'checkout'
