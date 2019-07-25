@@ -1,7 +1,5 @@
-
-
 node {
-    properties([pipelineTriggers([cron('H/5 * * * *')])])
+    properties([pipelineTriggers([cron('H/20 * * * *')])])
     try {
         stage('checkout') {
             echo 'checkout'
