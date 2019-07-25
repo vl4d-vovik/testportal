@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vl4d-vovik/testportal.git"
+    "url": "git+https://eagleinvsys.visualstudio.com/DIS_NG/_git/DIS_QE.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/vl4d-vovik/testportal/issues"
+    "url": "https://eagleinvsys.visualstudio.com/DIS_NG/_git/DIS_QE/issues"
   },
-  "homepage": "https://github.com/vl4d-vovik/testportal#readme",
+  "homepage": "https://eagleinvsys.visualstudio.com/DIS_NG/_git/DIS_QE#readme",
   "devDependencies": {
     "nightwatch": "^1.1.13"
   }
