@@ -1,4 +1,5 @@
 node {
+    tools {nodejs "nodejs"}
     properties([pipelineTriggers([cron('H H * * *')])])
     try {
         stage('checkout') {
