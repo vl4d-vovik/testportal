@@ -1,7 +1,8 @@
 node {
 
     def nodeHome = tool 'nodejs'
-    bat "\"${nodeHome}\"\\node.exe -v"
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh 'npm install'
 
     properties([pipelineTriggers([cron('H H * * *')])])
     try {
