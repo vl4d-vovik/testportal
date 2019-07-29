@@ -1,5 +1,8 @@
 node {
-    tools {nodejs "nodejs"}
+
+    def nodeHome = tool 'nodejs'
+    bat "\"${nodeHome}\"\\node.exe -v"
+
     properties([pipelineTriggers([cron('H H * * *')])])
     try {
         stage('checkout') {
