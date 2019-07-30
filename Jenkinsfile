@@ -1,6 +1,8 @@
 node {
 
-
+    def nodeHome = tool 'nodejs'
+    env.PATH = "${nodeHome}/bin:${env.PATH}"
+    sh 'node -v'
     //sh 'npm install nigthwatch --save-dev'
 
     properties([pipelineTriggers([cron('H H * * *')])])
@@ -13,18 +15,6 @@ node {
     } catch (e) {
         echo 'Failed'
     }
-    try {
-        stage('node') {
-            echo 'node'
-            def nodeHome = tool 'nodejs'
-            env.PATH = "${nodeHome}/bin:${env.PATH}"
-            sh 'node -v'
-        }
-        echo 'Ok'
-    } catch (e) {
-        echo 'Failed node'
-    }
-
     try {
         stage('test') {
             echo 'test'
