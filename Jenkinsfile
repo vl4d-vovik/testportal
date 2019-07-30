@@ -2,8 +2,8 @@ node {
 
     def nodeHome = tool 'nodejs'
     env.PATH = "${nodeHome}/bin:${env.PATH}"
-    sh 'node -v'
-    //sh 'npm install nigthwatch --save-dev'
+    //sh 'node -v'
+    bat 'npm install nigthwatch --save-dev'
 
     properties([pipelineTriggers([cron('H H * * *')])])
     try {
