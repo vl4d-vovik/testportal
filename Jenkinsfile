@@ -1,4 +1,5 @@
 node {
+    
     try {
         stage('checkout') {
             echo 'checkout'
@@ -12,6 +13,15 @@ node {
         stage('test') {
             echo 'test'
             bat "D://vvoitehovici//Downloads//apache-jmeter-5.1.1//bin//jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t jmeter//2.jmx"
+        }
+        echo 'Ok'
+    } catch (e) {
+        echo 'Failed'
+    }
+    try {
+        stage('Test report') {
+            echo 'Test report'
+            junit '**/reports/*.xml'
         }
         echo 'Ok'
     } catch (e) {
