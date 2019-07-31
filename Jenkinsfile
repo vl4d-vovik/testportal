@@ -1,11 +1,5 @@
 node {
-
-    def nodeHome = tool 'nodejs'
-    env.PATH = "${nodeHome}/bin:${env.PATH}"
-    bat 'npm install'
-    bat 'npm install nigthwatch'
-
-    properties([pipelineTriggers([cron('H H * * *')])])
+    
     try {
         stage('checkout') {
             echo 'checkout'
@@ -18,7 +12,7 @@ node {
     try {
         stage('test') {
             echo 'test'
-            bat 'npm test -- --tag test1'
+            bat 'D:\vvoitehovici\Downloads\apache-jmeter-5.1.1\bin\jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t jmeter/2.jmx'
         }
         echo 'Ok'
     } catch (e) {
