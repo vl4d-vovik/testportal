@@ -1,5 +1,4 @@
 node {
-    
     try {
         stage('checkout') {
             echo 'checkout'
