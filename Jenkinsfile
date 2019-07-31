@@ -19,15 +19,6 @@ node {
         echo 'Failed'
     }
     try {
-        stage('Test report') {
-            echo 'Test report'
-            junit '**/reports/*.xml'
-        }
-        echo 'Ok'
-    } catch (e) {
-        echo 'Failed'
-    }
-    try {
         stage('Final') {
             echo 'Ok'
         }
