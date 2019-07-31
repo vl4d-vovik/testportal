@@ -12,7 +12,7 @@ node {
     try {
         stage('test') {
             echo 'test'
-            bat 'D:\vvoitehovici\Downloads\apache-jmeter-5.1.1\bin\jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t jmeter/2.jmx'
+            bat "D://vvoitehovici//Downloads//apache-jmeter-5.1.1//bin//jmeter.bat -Jjmeter.save.saveservice.output_format=xml -n -t jmeter//2.jmx"
         }
         echo 'Ok'
     } catch (e) {
