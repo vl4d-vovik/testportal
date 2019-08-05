@@ -38,10 +38,10 @@ node {
 }
 
 def notifyFailed() {
-       emailext (
-       subject: "${status}: Job ${env.JOB_NAME} ([${env.BUILD_NUMBER})",
-       body: """
-       Check console output at <a href="${env.BUILD_URL}">${env.JOB_NAME} (${env.BUILD_NUMBER})</a>""",
-       to: "${BUILD_USER_EMAIL}",
-       from: 'jenkins@company.com')
+emailext (
+    subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+    body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+    recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+)
 }
