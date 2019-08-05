@@ -36,8 +36,9 @@ node {
         echo 'Failed'
     }
 }
-def mailRecipients = "vvoitehovici@eagleinvsys.com"
+
 def notifyFailed() {
+    def mailRecipients = "vvoitehovici@eagleinvsys.com";
 emailext (
     subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
     body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
