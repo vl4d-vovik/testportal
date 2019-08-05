@@ -34,6 +34,8 @@ node {
     } catch (e) {
         echo 'Failed'
     }
+}
+
 def notify(status) {
    wrap([$class: 'BuildUser']) {
        emailext (
@@ -43,6 +45,4 @@ def notify(status) {
        to: "${BUILD_USER_EMAIL}",
        from: 'jenkins@company.com')
    }
-}
-     
 }
