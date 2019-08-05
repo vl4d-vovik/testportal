@@ -39,7 +39,7 @@ node {
 
 def notifyFailed() {
 emailext (
-    subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+    subject: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
     body: "Failed: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                 to: "vvoitehovici@eagleinvsys.com"
 )
